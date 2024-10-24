@@ -1,0 +1,224 @@
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 11
+Server version: 8.3.0 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2024, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| campany            |
+| huye2              |
+| information_schema |
+| mysql              |
+| performance_schema |
+| ruhande            |
+| school             |
+| sys                |
++--------------------+
+8 rows in set (0.00 sec)
+
+mysql> USE RUHANDE;
+Database changed
+mysql> CREATE TABLE NGOMA(ID INT(10),FNAM CHAR(18),LNAME CHAR(15),GENDER CHAR(6),PROVINCE CHAR(16),DISTRICT CHAR(15),SECTOR CHAR(17),SELL CHAR(10),EMAIL CHAR(15),TEL CHAR(10));
+Query OK, 0 rows affected, 1 warning (0.03 sec)
+
+mysql> INSERT INTO NGOMA VALUES('1','CHANTAL','TUYUSHIME','F','EAST','NYAGATARE','RUKOMO','GASHENYI','NYANGE','CHNTLTUYISHIME@GMAIL.COM','0783566905');
+ERROR 1136 (21S01): Column count doesn't match value count at row 1
+mysql> INSERT INTO NGOMA VALUES('1','CHANTAL','TUYUSHIME','F','EAST','NYAGATARE','RUKOMO','GASHENYI','CHNTLTUYISHIME@GMAIL.COM','0783566905');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> INSERT INTO NGOMA VALUES('2','MUNEZA','CEDRIC','M','EAST','GATSIBO','REBERO','MWURIRO','MUNEZACEDRIC@GMAIL.COM','0783566910');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> INSERT INTO NGOMA VALUES('3','IRAKIZA','JAMES','M','SOUTH','HUYE','NYANGE','GAHORORO','IRAKIZAJAMES@GMAIL.COM','0788866910');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> INSERT INTO NGOMA VALUES('4','ISHIMWE','ANICETI','M','NORTH','RURINDO','TUMBA','MUKOTO','ISHIMEANICET@GMAIL.COM','0783366910');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> INSERT INTO NGOMA VALUES('5','TASIE','MUNEZA','M','KIGALI','GASABO','GATSATA','NYANGE','TASIEMUNEZA@GMAIL.COM','0783367810');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> INSERT INTO NGOMA VALUES('6','MUTESI','NOELA','F','KIGALI','KICUKIRO','GAHOGO','KAGUGU','NOELAMUTESI@GMAIL.COM','0783367350');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> INSERT INTO NGOMA VALUES('6','INEZA','TETA','F','EAST','NGOMA','GAKWAERERE','RURENGE',TETAINEZA@GMAIL.COM','0783267350');
+    '>
+    '> INSERT INTO NGOMA VALUES('7','INEZA','TETA','F','EAST','NGOMA','GAKWAERERE','RURENGE',TETAINEZA@GMAIL.COM','0783267350');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '@GMAIL.COM','0783267350');
+
+INSERT INTO NGOMA VALUES('7','INEZA','TETA','F','EAS' at line 1
+mysql> INSERT INTO NGOMA VALUES('7','INEZA','TETA','F','EAST','NGOMA','GAKWERERE','RURENGE',TETAINEZA@GMAIL.COM','0783267350');
+    '> INSERT INTO NGOMA VALUES('7','INEZA','TETA','F','EAST','NGOMA','GAKWERERE','RURENGE',TETAINEZA@GMAIL.COM','0783267350');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '@GMAIL.COM','0783267350');
+INSERT INTO NGOMA VALUES('7','INEZA','TETA','F','EAST' at line 1
+mysql> INSERT INTO NGOMA VALUES('7','INEZA','TETA','F','EAST','KIREHE','GAKWERERE','RUBENDERE','TETAINEZA@GMAIL.COM','0783266904');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> INSERT INTO NGOMA VALUES('8','SENGA','DEBOLA','F','NORTH','NYABIHU','CYOHOHA','HURO','DEBOLASENGA@GMAIL.COM','0783267604');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> INSERT INTO NGOMA VALUES('9','NIYERA','FANNY','F','NORTH','GISENYI','CYINYANA','GABIRO','FANNYNIYERA3@GMAIL.COM','0783267600');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> INSERT INTO NGOMA VALUES('10','GANI','CYUZA','M','EAST','RWAMAGANA','AMAHORO','KABEZA','GANICYUZA@GMAIL.COM','07832677006');
+Query OK, 1 row affected, 2 warnings (0.00 sec)
+
+mysql> SELECT *FROM NGOMA;
++------+---------+-----------+--------+----------+-----------+-----------+-----------+-----------------+------------+
+| ID   | FNAM    | LNAME     | GENDER | PROVINCE | DISTRICT  | SECTOR    | SELL      | EMAIL           | TEL        |
++------+---------+-----------+--------+----------+-----------+-----------+-----------+-----------------+------------+
+|    1 | CHANTAL | TUYUSHIME | F      | EAST     | NYAGATARE | RUKOMO    | GASHENYI  | CHNTLTUYISHIME@ | 0783566905 |
+|    2 | MUNEZA  | CEDRIC    | M      | EAST     | GATSIBO   | REBERO    | MWURIRO   | MUNEZACEDRIC@GM | 0783566910 |
+|    3 | IRAKIZA | JAMES     | M      | SOUTH    | HUYE      | NYANGE    | GAHORORO  | IRAKIZAJAMES@GM | 0788866910 |
+|    4 | ISHIMWE | ANICETI   | M      | NORTH    | RURINDO   | TUMBA     | MUKOTO    | ISHIMEANICET@GM | 0783366910 |
+|    5 | TASIE   | MUNEZA    | M      | KIGALI   | GASABO    | GATSATA   | NYANGE    | TASIEMUNEZA@GMA | 0783367810 |
+|    6 | MUTESI  | NOELA     | F      | KIGALI   | KICUKIRO  | GAHOGO    | KAGUGU    | NOELAMUTESI@GMA | 0783367350 |
+|    7 | INEZA   | TETA      | F      | EAST     | KIREHE    | GAKWERERE | RUBENDERE | TETAINEZA@GMAIL | 0783266904 |
+|    8 | SENGA   | DEBOLA    | F      | NORTH    | NYABIHU   | CYOHOHA   | HURO      | DEBOLASENGA@GMA | 0783267604 |
+|    9 | NIYERA  | FANNY     | F      | NORTH    | GISENYI   | CYINYANA  | GABIRO    | FANNYNIYERA3@GM | 0783267600 |
+|   10 | GANI    | CYUZA     | M      | EAST     | RWAMAGANA | AMAHORO   | KABEZA    | GANICYUZA@GMAIL | 0783267700 |
++------+---------+-----------+--------+----------+-----------+-----------+-----------+-----------------+------------+
+10 rows in set (0.00 sec)
+
+mysql> SELECT ID,PROVINCE,EMAIL,TEL FROM NGOMA;
++------+----------+-----------------+------------+
+| ID   | PROVINCE | EMAIL           | TEL        |
++------+----------+-----------------+------------+
+|    1 | EAST     | CHNTLTUYISHIME@ | 0783566905 |
+|    2 | EAST     | MUNEZACEDRIC@GM | 0783566910 |
+|    3 | SOUTH    | IRAKIZAJAMES@GM | 0788866910 |
+|    4 | NORTH    | ISHIMEANICET@GM | 0783366910 |
+|    5 | KIGALI   | TASIEMUNEZA@GMA | 0783367810 |
+|    6 | KIGALI   | NOELAMUTESI@GMA | 0783367350 |
+|    7 | EAST     | TETAINEZA@GMAIL | 0783266904 |
+|    8 | NORTH    | DEBOLASENGA@GMA | 0783267604 |
+|    9 | NORTH    | FANNYNIYERA3@GM | 0783267600 |
+|   10 | EAST     | GANICYUZA@GMAIL | 0783267700 |
++------+----------+-----------------+------------+
+10 rows in set (0.00 sec)
+
+mysql> SELECT *FROM NGOMA WHERE ID='1';
++------+---------+-----------+--------+----------+-----------+--------+----------+-----------------+------------+
+| ID   | FNAM    | LNAME     | GENDER | PROVINCE | DISTRICT  | SECTOR | SELL     | EMAIL           | TEL        |
++------+---------+-----------+--------+----------+-----------+--------+----------+-----------------+------------+
+|    1 | CHANTAL | TUYUSHIME | F      | EAST     | NYAGATARE | RUKOMO | GASHENYI | CHNTLTUYISHIME@ | 0783566905 |
++------+---------+-----------+--------+----------+-----------+--------+----------+-----------------+------------+
+1 row in set (0.00 sec)
+
+mysql> ALTER TABLE NGOMA ADD VILLAGE CHAR(10);
+Query OK, 10 rows affected (0.04 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+mysql> SELECT *FROM NGOMA;
++------+---------+-----------+--------+----------+-----------+-----------+-----------+-----------------+------------+---------+
+| ID   | FNAM    | LNAME     | GENDER | PROVINCE | DISTRICT  | SECTOR    | SELL      | EMAIL           | TEL        | VILLAGE |
++------+---------+-----------+--------+----------+-----------+-----------+-----------+-----------------+------------+---------+
+|    1 | CHANTAL | TUYUSHIME | F      | EAST     | NYAGATARE | RUKOMO    | GASHENYI  | CHNTLTUYISHIME@ | 0783566905 | NULL    |
+|    2 | MUNEZA  | CEDRIC    | M      | EAST     | GATSIBO   | REBERO    | MWURIRO   | MUNEZACEDRIC@GM | 0783566910 | NULL    |
+|    3 | IRAKIZA | JAMES     | M      | SOUTH    | HUYE      | NYANGE    | GAHORORO  | IRAKIZAJAMES@GM | 0788866910 | NULL    |
+|    4 | ISHIMWE | ANICETI   | M      | NORTH    | RURINDO   | TUMBA     | MUKOTO    | ISHIMEANICET@GM | 0783366910 | NULL    |
+|    5 | TASIE   | MUNEZA    | M      | KIGALI   | GASABO    | GATSATA   | NYANGE    | TASIEMUNEZA@GMA | 0783367810 | NULL    |
+|    6 | MUTESI  | NOELA     | F      | KIGALI   | KICUKIRO  | GAHOGO    | KAGUGU    | NOELAMUTESI@GMA | 0783367350 | NULL    |
+|    7 | INEZA   | TETA      | F      | EAST     | KIREHE    | GAKWERERE | RUBENDERE | TETAINEZA@GMAIL | 0783266904 | NULL    |
+|    8 | SENGA   | DEBOLA    | F      | NORTH    | NYABIHU   | CYOHOHA   | HURO      | DEBOLASENGA@GMA | 0783267604 | NULL    |
+|    9 | NIYERA  | FANNY     | F      | NORTH    | GISENYI   | CYINYANA  | GABIRO    | FANNYNIYERA3@GM | 0783267600 | NULL    |
+|   10 | GANI    | CYUZA     | M      | EAST     | RWAMAGANA | AMAHORO   | KABEZA    | GANICYUZA@GMAIL | 0783267700 | NULL    |
++------+---------+-----------+--------+----------+-----------+-----------+-----------+-----------------+------------+---------+
+10 rows in set (0.00 sec)
+
+mysql> UPDATE NGOMA SET VILLAGE='GARURO' WHERE ID='1';
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> UPDATE NGOMA SET VILLAGE='MURIRWA' WHERE ID='2';
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> UPDATE NGOMA SET VILLAGE='ISANGO' WHERE ID='3';
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> UPDATE NGOMA SET VILLAGE='GASARA' WHERE ID='4';
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> SELECT *FROM NGOMA;
++------+---------+-----------+--------+----------+-----------+-----------+-----------+-----------------+------------+---------+
+| ID   | FNAM    | LNAME     | GENDER | PROVINCE | DISTRICT  | SECTOR    | SELL      | EMAIL           | TEL        | VILLAGE |
++------+---------+-----------+--------+----------+-----------+-----------+-----------+-----------------+------------+---------+
+|    1 | CHANTAL | TUYUSHIME | F      | EAST     | NYAGATARE | RUKOMO    | GASHENYI  | CHNTLTUYISHIME@ | 0783566905 | GARURO  |
+|    2 | MUNEZA  | CEDRIC    | M      | EAST     | GATSIBO   | REBERO    | MWURIRO   | MUNEZACEDRIC@GM | 0783566910 | MURIRWA |
+|    3 | IRAKIZA | JAMES     | M      | SOUTH    | HUYE      | NYANGE    | GAHORORO  | IRAKIZAJAMES@GM | 0788866910 | ISANGO  |
+|    4 | ISHIMWE | ANICETI   | M      | NORTH    | RURINDO   | TUMBA     | MUKOTO    | ISHIMEANICET@GM | 0783366910 | GASARA  |
+|    5 | TASIE   | MUNEZA    | M      | KIGALI   | GASABO    | GATSATA   | NYANGE    | TASIEMUNEZA@GMA | 0783367810 | NULL    |
+|    6 | MUTESI  | NOELA     | F      | KIGALI   | KICUKIRO  | GAHOGO    | KAGUGU    | NOELAMUTESI@GMA | 0783367350 | NULL    |
+|    7 | INEZA   | TETA      | F      | EAST     | KIREHE    | GAKWERERE | RUBENDERE | TETAINEZA@GMAIL | 0783266904 | NULL    |
+|    8 | SENGA   | DEBOLA    | F      | NORTH    | NYABIHU   | CYOHOHA   | HURO      | DEBOLASENGA@GMA | 0783267604 | NULL    |
+|    9 | NIYERA  | FANNY     | F      | NORTH    | GISENYI   | CYINYANA  | GABIRO    | FANNYNIYERA3@GM | 0783267600 | NULL    |
+|   10 | GANI    | CYUZA     | M      | EAST     | RWAMAGANA | AMAHORO   | KABEZA    | GANICYUZA@GMAIL | 0783267700 | NULL    |
++------+---------+-----------+--------+----------+-----------+-----------+-----------+-----------------+------------+---------+
+10 rows in set (0.00 sec)
+
+mysql> ALTER TABLE NGOMA DROP SELL;
+Query OK, 10 rows affected (0.05 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+mysql> SELECT *FROM NGOMA;
++------+---------+-----------+--------+----------+-----------+-----------+-----------------+------------+---------+
+| ID   | FNAM    | LNAME     | GENDER | PROVINCE | DISTRICT  | SECTOR    | EMAIL           | TEL        | VILLAGE |
++------+---------+-----------+--------+----------+-----------+-----------+-----------------+------------+---------+
+|    1 | CHANTAL | TUYUSHIME | F      | EAST     | NYAGATARE | RUKOMO    | CHNTLTUYISHIME@ | 0783566905 | GARURO  |
+|    2 | MUNEZA  | CEDRIC    | M      | EAST     | GATSIBO   | REBERO    | MUNEZACEDRIC@GM | 0783566910 | MURIRWA |
+|    3 | IRAKIZA | JAMES     | M      | SOUTH    | HUYE      | NYANGE    | IRAKIZAJAMES@GM | 0788866910 | ISANGO  |
+|    4 | ISHIMWE | ANICETI   | M      | NORTH    | RURINDO   | TUMBA     | ISHIMEANICET@GM | 0783366910 | GASARA  |
+|    5 | TASIE   | MUNEZA    | M      | KIGALI   | GASABO    | GATSATA   | TASIEMUNEZA@GMA | 0783367810 | NULL    |
+|    6 | MUTESI  | NOELA     | F      | KIGALI   | KICUKIRO  | GAHOGO    | NOELAMUTESI@GMA | 0783367350 | NULL    |
+|    7 | INEZA   | TETA      | F      | EAST     | KIREHE    | GAKWERERE | TETAINEZA@GMAIL | 0783266904 | NULL    |
+|    8 | SENGA   | DEBOLA    | F      | NORTH    | NYABIHU   | CYOHOHA   | DEBOLASENGA@GMA | 0783267604 | NULL    |
+|    9 | NIYERA  | FANNY     | F      | NORTH    | GISENYI   | CYINYANA  | FANNYNIYERA3@GM | 0783267600 | NULL    |
+|   10 | GANI    | CYUZA     | M      | EAST     | RWAMAGANA | AMAHORO   | GANICYUZA@GMAIL | 0783267700 | NULL    |
++------+---------+-----------+--------+----------+-----------+-----------+-----------------+------------+---------+
+10 rows in set (0.00 sec)
+
+mysql> SELECT *FROM NGOMA WHERE ID=3 AND DISTRICT='HUYE';
++------+---------+-------+--------+----------+----------+--------+-----------------+------------+---------+
+| ID   | FNAM    | LNAME | GENDER | PROVINCE | DISTRICT | SECTOR | EMAIL           | TEL        | VILLAGE |
++------+---------+-------+--------+----------+----------+--------+-----------------+------------+---------+
+|    3 | IRAKIZA | JAMES | M      | SOUTH    | HUYE     | NYANGE | IRAKIZAJAMES@GM | 0788866910 | ISANGO  |
++------+---------+-------+--------+----------+----------+--------+-----------------+------------+---------+
+1 row in set (0.00 sec)
+
+mysql> SELECT *FROM NGOMA WHERE ID=3 OR PROVINCE='EAST';
++------+---------+-----------+--------+----------+-----------+-----------+-----------------+------------+---------+
+| ID   | FNAM    | LNAME     | GENDER | PROVINCE | DISTRICT  | SECTOR    | EMAIL           | TEL        | VILLAGE |
++------+---------+-----------+--------+----------+-----------+-----------+-----------------+------------+---------+
+|    1 | CHANTAL | TUYUSHIME | F      | EAST     | NYAGATARE | RUKOMO    | CHNTLTUYISHIME@ | 0783566905 | GARURO  |
+|    2 | MUNEZA  | CEDRIC    | M      | EAST     | GATSIBO   | REBERO    | MUNEZACEDRIC@GM | 0783566910 | MURIRWA |
+|    3 | IRAKIZA | JAMES     | M      | SOUTH    | HUYE      | NYANGE    | IRAKIZAJAMES@GM | 0788866910 | ISANGO  |
+|    7 | INEZA   | TETA      | F      | EAST     | KIREHE    | GAKWERERE | TETAINEZA@GMAIL | 0783266904 | NULL    |
+|   10 | GANI    | CYUZA     | M      | EAST     | RWAMAGANA | AMAHORO   | GANICYUZA@GMAIL | 0783267700 | NULL    |
++------+---------+-----------+--------+----------+-----------+-----------+-----------------+------------+---------+
+5 rows in set (0.00 sec)
+
+mysql> SELECT *FROM NGOMA WHERE ID=3 AND PROVINCE='EAST';
+Empty set (0.00 sec)
+
+mysql> SELECT *FROM NGOMA WHERE ID=7 AND PROVINCE='EAST';
++------+-------+-------+--------+----------+----------+-----------+-----------------+------------+---------+
+| ID   | FNAM  | LNAME | GENDER | PROVINCE | DISTRICT | SECTOR    | EMAIL           | TEL        | VILLAGE |
++------+-------+-------+--------+----------+----------+-----------+-----------------+------------+---------+
+|    7 | INEZA | TETA  | F      | EAST     | KIREHE   | GAKWERERE | TETAINEZA@GMAIL | 0783266904 | NULL    |
++------+-------+-------+--------+----------+----------+-----------+-----------------+------------+---------+
+1 row in set (0.00 sec)
+
+mysql> SELECT *FROM NGOMA WHERE ID=7 AND PROVINCE='EAST';
